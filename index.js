@@ -18,6 +18,7 @@ function addOne(team) {
       console.log('error');
   }
 }
+window.addOne = addOne;
 
 function addTwo(team) {
   switch (team) {
@@ -33,6 +34,7 @@ function addTwo(team) {
       console.log('error');
   }
 }
+window.addTwo = addTwo;
 
 function addThree(team) {
   switch (team) {
@@ -48,3 +50,4 @@ function addThree(team) {
       console.log('error');
   }
 }
+window.addThree = addThree;
