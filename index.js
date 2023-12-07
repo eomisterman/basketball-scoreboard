@@ -94,6 +94,8 @@ function reset() {
   awayScore = 0;
   homeEl.textContent = homeScore;
   awayEl.textContent = awayScore;
+  // Reset leader highlighting
+  updateLeader();
   // Reset clock
   if (intervalID) {
     clearInterval(intervalID);
