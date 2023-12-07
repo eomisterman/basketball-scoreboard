@@ -8,30 +8,50 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
-    <div class="team-score">
-        <h1 class="team">HOME</h1>
-        <div class="score">
+  <main>
+    <section class="clock-container">
+      <div class="digits" id="clock">
+        <p><span id="minutes">20</span>:<span id="seconds">00</span></p>
+      </div>
+    </section>
+    <section class="scoreboard-container">
+      <div class="team-container">
+        <h1 class="title">HOME</h1>
+        <div class="digits score">
           <p id="home-score">0</p>
         </div>
-        <div class="num-points">
-          <button class="points-button" onclick="addOne('home')">+1</button>
-          <button class="points-button" onclick="addTwo('home')">+2</button>
-          <button class="points-button" onclick="addThree('home')">+3</button>
+        <div class="leader" id="home-leader"></div>
+        <div class="team-points">
+          <button class="button" onclick="addOne('home')">+1</button>
+          <button class="button" onclick="addTwo('home')">+2</button>
+          <button class="button" onclick="addThree('home')">+3</button>
         </div>
-    </div>
-    <div class="team-score">
-        <h1 class="team">GUEST</h1>
-        <div class="score">
+      </div>
+      <div class="period-container">
+        <h1 class="title">PERIOD</h1>
+        <div class="digits period">
+          <p id="period-num">1</p>
+        </div>
+      </div>
+      <div class="team-container">
+        <h1 class="title">GUEST</h1>
+        <div class="digits score">
           <p id="away-score">0</p>
         </div>
-        <div class="num-points">
-          <button class="points-button" onclick="addOne('away')">+1</button>
-          <button class="points-button" onclick="addTwo('away')">+2</button>
-          <button class="points-button" onclick="addThree('away')">+3</button>
+        <div class="leader" id="away-leader"></div>
+        <div class="team-points">
+          <button class="button" onclick="addOne('away')">+1</button>
+          <button class="button" onclick="addTwo('away')">+2</button>
+          <button class="button" onclick="addThree('away')">+3</button>
         </div>
-    </div>
-  </div>
+      </div>
+    </section>
+    <section class="controls-container">
+      <button class="button control" id="start-stop" onclick="startStopClock()">START</button>
+      <button class="button control" onclick="nextPeriod()">PERIOD</button>
+      <button class="button control" onclick="reset()">RESET</button>
+    </section>
+  </main>
   <script src="index.js" type="module"></script>
 </body>
 </html>
